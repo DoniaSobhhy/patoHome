@@ -1,0 +1,530 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.4s;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(fonts/montserrat/Montserrat-Italic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(fonts/poppins/Poppins-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "courgette";
+  src: url(fonts/courgette/Courgette-Regular.ttf) format("truetype");
+}
+
+:root {
+  --red-color: #d41b22;
+  --white-color: #fff;
+  --black-color: #000;
+  --gray-color: #666666;
+  --light-gray-color: #919191;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  transition: 2s;
+}
+.logo {
+  margin-left: 30px;
+}
+nav ul {
+  margin-left: 50px;
+}
+nav ul li a {
+  margin-left: 30px;
+  color: var(--white-color) !important;
+}
+nav ul li a:hover {
+  color: var(--red-color) !important;
+}
+.navbarDown {
+  background-color: var(--black-color) !important;
+  opacity: 0.8;
+  transition: all 0.5s;
+}
+#upArrow {
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  background-color: var(--gray-color);
+  border-radius: 50%;
+  text-align: center;
+  color: var(--white-color);
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  z-index: 100;
+  right: 5%;
+  bottom: 10%;
+  transition: 1s;
+  opacity: 0.5;
+}
+#upArrow:hover {
+  background-color: var(--red-color);
+  transition: 1s;
+}
+
+/* ======================================== */
+#content-intro {
+  background-image: url(../img/icons/pattern1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hed1 {
+  font-size: 60px;
+  font-family: "Indie Flower", cursive;
+  margin-top: -150px;
+}
+.hed2 {
+  letter-spacing: 4px;
+  font-family: Montserrat;
+}
+.head-btn {
+  background-color: var(--white-color);
+  color: var(--red-color);
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  margin-right: 30px;
+  transition: 0.5s;
+}
+.head-btn:hover {
+  color: var(--white-color);
+  background-color: var(--red-color);
+  transition: 0.5s;
+}
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    background-color: var(--gray-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    z-index: 1050;
+  }
+  .navbar-collapse.show {
+    right: 0;
+  }
+  .navbar-toggler {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1060;
+  }
+}
+@media (max-width: 900px) {
+  .carousel-item {
+    height: 89vh;
+  }
+  .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .carousel-caption .bg-danger {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+  .carousel-caption .fw-bold {
+    font-size: 1.2rem;
+  }
+  .carousel-caption .countdown div span {
+    font-size: 1rem;
+  }
+  .carousel-caption .countdown div p {
+    font-size: 0.7rem;
+  }
+  .carousel-caption a {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 576px) {
+  .carousel-caption {
+    top: 70%;
+    transform: translate(-50%, -70%);
+  }
+
+  .carousel-caption .tit1 {
+    font-size: 1.2rem;
+  }
+
+  .carousel-caption .tit2 {
+    font-size: 0.8rem;
+  }
+
+  .carousel-caption .bg-danger {
+    font-size: 0.7rem;
+  }
+
+  .carousel-caption .fw-bold {
+    font-size: 1rem;
+  }
+
+  .carousel-caption .countdown div span {
+    font-size: 0.8rem;
+  }
+
+  .carousel-caption .countdown div p {
+    font-size: 0.6rem;
+  }
+
+  .carousel-caption a {
+    font-size: 0.7rem;
+  }
+}
+
+/* ===================================== */
+.tit1 {
+  color: var(--red-color);
+  font-family: "Courgette", cursive;
+  font-size: 30px;
+}
+.tit2 {
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-weight: bold;
+  font-size: 50px;
+}
+.p1 {
+  color: var(--gray-color);
+  line-height: 1.7;
+}
+.btn2 {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--black-color);
+  margin-left: 50px;
+}
+.btn2:hover {
+  color: var(--red-color);
+}
+.img1,
+.book_img {
+  width: 400px;
+  margin-left: 25px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+.img1:hover,
+.img-intro:hover,
+.book_img:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+.sec3 {
+  background-image: url(../img/bg-intro-01.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 60vh;
+  text-align: center;
+  border-radius: 10px;
+}
+/* -------------------------- */
+.Romantic {
+  color: var(--black-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Poppins";
+}
+.Romantic2 {
+  color: var(--black-color);
+  text-transform: uppercase;
+  font-family: "Poppins";
+}
+.img-intro {
+  border-radius: 5px;
+}
+.btn3 {
+  color: var(--black-color);
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 12px;
+}
+.btn3:hover,
+.Romantic:hover,
+.Romantic2:hover {
+  color: var(--red-color);
+}
+/* ---------------menu------------ */
+#our-menu,
+#review {
+  background-image: url(../img/icons/pattern2.png);
+  background-repeat: repeat;
+}
+.tall-card {
+  height: 100%;
+  min-height: 400px;
+}
+.wide-card {
+  height: 100%;
+  min-height: 200px;
+}
+.card-img-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.discover-btn,
+.discover-btn1 {
+  font-size: 22px;
+  background-color: var(--white-color);
+  color: var(--black-color);
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  font-family: "Poppins" !important;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+}
+.discover-btn {
+  width: 157px;
+}
+.discover-btn1 {
+  width: 255px;
+  height: 60px;
+}
+.discover-btn:hover,
+.discover-btn1:hover {
+  background-color: var(--red-color);
+  color: var(--white-color);
+}
+.card {
+  width: 100%;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.carousel .carousel-indicators button {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: var(--light-gray-color);
+  transition: all 0.3s ease;
+}
+.carousel .carousel-indicators .active {
+  background-color: var(--red-color);
+  border: 2px solid var(--red-color);
+}
+.carousel .carousel-indicators button:hover {
+  background-color: var(--red-color);
+}
+/* booking */
+.head-btn2 {
+  background-color: var(--black-color);
+  color: var(--white-color);
+  font-family: "Poppins";
+  height: 40px;
+  border: 0;
+  border-radius: 8px;
+  width: 150px;
+  margin-top: 15px;
+  margin-left: 90px;
+}
+.head-btn2:hover {
+  background-color: var(--red-color);
+}
+/* review */
+.star {
+  color: var(--red-color);
+}
+/*start video */
+.section-video {
+  background-image: url(../img/bg-cover-video-02.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+  padding: 50px 0;
+  height: 100vh;
+}
+.section-video .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.section-video .content-video {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 150px;
+}
+.section-video .content-video h3 {
+  color: var(--white-color);
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fade-in 1s ease-in-out;
+  font-family: "Poppins";
+}
+.section-video .btn-play {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--white-color);
+  color: var(--black-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fade-in 1s ease-in-out;
+}
+.section-video .btn-play i {
+  transition: all 0.3s ease;
+  /* margin-top: 50px !important; */
+}
+.section-video .btn-play:hover {
+  background-color: var(--red-color);
+  color: var(--black-color);
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+.section-video .btn-play:hover i {
+  color: var(--white-color);
+  transition: all 0.3s ease;
+}
+.modal-backdrop {
+  z-index: 1;
+}
+iframe {
+  z-index: 10000 !important;
+}
+.btn-close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 10001 !important;
+}
+/* start sign up */
+.sign-up {
+  background-image: url(../img/icons/pattern2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 50px 0;
+  height: 35vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sign-up .txt5 {
+  margin: 10px;
+  font-family: "Poppins";
+  font-weight: 300;
+  font-size: 22px;
+  color: #333333;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.sign-up input {
+  border-radius: 8px;
+  border: solid 1px var(--gray-color);
+  padding: 10px 20px;
+  color: #333333;
+  width: 200px;
+}
+.sign-up button {
+  border-radius: 8px;
+  border: none;
+  padding: 10px 20px;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.sign-up button:hover {
+  background-color: var(--red-color);
+  color: var(--white-color);
+  transition: all 0.3s ease;
+}
+@media (max-width: 767px) {
+  .sign-up {
+    padding: 1rem;
+  }
+
+  .sign-up .col-12 {
+    margin-bottom: 1rem;
+  }
+}
+/* end sign up */
+/* footer */
+footer {
+  background-color: #222222;
+  color: #ccc;
+  padding: 40px 0;
+}
+
+footer h4 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+footer p,
+footer li,
+footer a {
+  color: #999999;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--red-color);
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.end-footer {
+  position: absolute;
+  bottom: 10;
+  width: 100%;
+  background-color: #111111;
+  padding: 15px 0;
+  color: #777;
+  font-size: 13px;
+}
+
+.end-footer a {
+  color: var(--red-color);
+}
